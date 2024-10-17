@@ -86,7 +86,6 @@ typedef struct
 	uint32_t			tick;
 	task_system_st_t	state;
 	task_system_ev_t	event;
-	bool				flag;
 } task_system_dta_t;
 
 /********************** external data declaration ****************************/
