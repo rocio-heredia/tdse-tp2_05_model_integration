@@ -48,6 +48,8 @@
 #include "board.h"
 #include "app.h"
 #include "task_system_attribute.h"
+#include "task_actuator_attribute.h"
+#include "task_actuator_interface.h"
 
 /********************** macros and definitions *******************************/
 #define EVENT_UNDEFINED	(255)

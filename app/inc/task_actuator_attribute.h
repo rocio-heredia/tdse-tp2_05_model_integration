@@ -105,21 +105,28 @@ extern "C" {
  */
 
 /* Events to excite Task Actuator */
-typedef enum task_actuator_ev {EV_LED_XX_OFF,
-							   EV_LED_XX_ON,
-							   EV_LED_XX_NOT_BLINK,
-							   EV_LED_XX_BLINK,
-							   EV_LED_XX_PULSE} task_actuator_ev_t;
+typedef enum task_actuator_ev {
+	EV_LED_XX_OFF,
+	EV_LED_XX_ON,
+	EV_LED_XX_BLINK,
+} task_actuator_ev_t;
 
 /* States of Task Actuator */
-typedef enum task_actuator_st {ST_LED_XX_OFF,
-							   ST_LED_XX_ON,
-							   ST_LED_XX_BLINK_ON,
-							   ST_LED_XX_BLINK_OFF,
-							   ST_LED_XX_PULSE} task_actuator_st_t;
+typedef enum task_actuator_st {
+	ST_LED_XX_OFF,
+	ST_LED_XX_ON,
+	ST_LED_XX_BLINK_ON,
+	ST_LED_XX_BLINK_OFF,
+	ST_LED_XX_PULSE
+} task_actuator_st_t;
 
 /* Identifier of Task Actuator */
-typedef enum task_actuator_id {ID_LED_A} task_actuator_id_t;
+typedef enum task_actuator_id {
+	ID_LED_A,
+	ID_LED_GENERAR_TICKET,
+	ID_LED_TICKET_DISPONIBLE,
+	ID_LED_BARRERA,
+} task_actuator_id_t;
 
 typedef struct
 {
