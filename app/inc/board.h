@@ -59,11 +59,6 @@ extern "C" {
 /* STM32 Nucleo Boards - 64 Pins */
 #if ((BOARD == NUCLEO_F103RC) || (BOARD == NUCLEO_F401RE) || (BOARD == NUCLEO_F446RE))
 
-#define BTN_A_PIN		B1_Pin
-#define BTN_A_PORT		B1_GPIO_Port
-#define BTN_A_PRESSED	GPIO_PIN_RESET
-#define BTN_A_HOVER		GPIO_PIN_SET
-
 #define BTN_S1_PIN		S1_Pin
 #define BTN_S1_PORT		S1_GPIO_Port
 #define BTN_S1_PRESSED	GPIO_PIN_RESET
@@ -84,10 +79,20 @@ extern "C" {
 #define BTN_S4_PRESSED	GPIO_PIN_RESET
 #define BTN_S4_HOVER	GPIO_PIN_SET
 
-#define LED_A_PIN		LD2_Pin
-#define LED_A_PORT		LD2_GPIO_Port
-#define LED_A_ON		GPIO_PIN_SET
-#define LED_A_OFF		GPIO_PIN_RESET
+#define LED_D1_PIN		LD1_Pin
+#define LED_D1_PORT		LD1_GPIO_Port
+#define LED_D1_ON		GPIO_PIN_SET
+#define LED_D1_OFF		GPIO_PIN_RESET
+
+#define LED_D2_PORT		LD2_GPIO_Port
+#define LED_D2_PIN		LD2_Pin
+#define LED_D2_ON		GPIO_PIN_SET
+#define LED_D2_OFF		GPIO_PIN_RESET
+
+#define LED_D3_PIN		LD3_Pin
+#define LED_D3_PORT		LD3_GPIO_Port
+#define LED_D3_ON		GPIO_PIN_SET
+#define LED_D3_OFF		GPIO_PIN_RESET
 
 #endif/* STM32 Nucleo Boards - 144 Pins */
 

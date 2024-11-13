@@ -164,15 +164,17 @@ void task_system_update(void *parameters)
 
 				} else if (p_task_system_dta->event == EV_SYS_DOWN_APRETAR_BOTON) {
 					p_task_system_dta->state = ST_SYS_GENERANDO_TICKET;
-					put_event_task_actuator(EV_LED_XX_BLINK, ID_LED_GENERAR_TICKET);
+					put_event_task_actuator(EV_LED_XX_BLINK_ON, ID_LED_GENERAR_TICKET);
 				}
 				break;
 			case ST_SYS_GENERANDO_TICKET:
 				if (p_task_system_dta->event == EV_SYS_UP_DETECTAR_AUTO) {
 					p_task_system_dta->state = ST_SYS_SIN_AUTO;
+					put_event_task_actuator(EV_LED_XX_BLINK_OFF, ID_LED_GENERAR_TICKET);
 
 				} else if (p_task_system_dta->event == EV_SYS_DOWN_TICKET_GENERADO) {
 					p_task_system_dta->state = ST_SYS_TICKET_GENERADO;
+					put_event_task_actuator(EV_LED_XX_BLINK_OFF, ID_LED_GENERAR_TICKET);
 					put_event_task_actuator(EV_LED_XX_ON, ID_LED_TICKET_DISPONIBLE);
 				}
 				break;
