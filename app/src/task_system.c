@@ -141,7 +141,6 @@ void task_system_update(void *parameters)
 
     	/* Update Task System Data Pointer */
 		p_task_system_dta = &task_system_dta;
-//		LOGGER_LOG("Llegue aca\n");
 
 		if (!any_event_task_system())
 		{
@@ -149,7 +148,6 @@ void task_system_update(void *parameters)
 		}
 
 		p_task_system_dta->event = get_event_task_system();
-//		LOGGER_LOG("%i", p_task_system_dta->event);
 
 		switch (p_task_system_dta->state)
 		{
@@ -176,6 +174,7 @@ void task_system_update(void *parameters)
 					p_task_system_dta->state = ST_SYS_TICKET_GENERADO;
 					put_event_task_actuator(EV_LED_XX_BLINK_OFF, ID_LED_GENERAR_TICKET);
 					put_event_task_actuator(EV_LED_XX_ON, ID_LED_TICKET_DISPONIBLE);
+
 				}
 				break;
 			case ST_SYS_TICKET_GENERADO:
@@ -213,6 +212,7 @@ void task_system_update(void *parameters)
 				} else if (p_task_system_dta->event == EV_SYS_UP_PASAR_BARRERA) {
 					p_task_system_dta->state = ST_SYS_SIN_AUTO;
 					put_event_task_actuator(EV_LED_XX_OFF, ID_LED_BARRERA);
+
 				}
 				break;
 		}
